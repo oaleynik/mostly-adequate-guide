@@ -246,7 +246,6 @@ I swapped out any `map/join` with our new `chain` function to tidy things up a b
 getJSON('/authenticate', {username: 'stale', password: 'crackers'})
   .chain(function(user) {
     return getJSON('/friends', {user_id: user.id});
-});
 // Task([{name: 'Seimith', id: 14}, {name: 'Ric', id: 39}]);
 
 
